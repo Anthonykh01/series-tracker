@@ -4,6 +4,13 @@ export interface Movie{
   name: string;
   photo: string;
   description: string;
+  genre: string;
+}
+export interface Moviec{
+  name: string;
+  photo: string;
+  description: string;
+  genre: string;
 }
 export interface Newmovie{
   name: string;
@@ -25,7 +32,13 @@ export class MovieService {
     return this.http.get<[Newmovie]>(this.url+ 'newmovies.php');
   }
   searchaction(){
-    return this.http.get<[Newmovie]>(this.url+ 'action.php');
+    return this.http.get<[Moviec]>(this.url+ 'action.php');
+  }
+  searchcomedy(){
+    return this.http.get<[Movie]>(this.url+ 'comedy.php');
+  }
+  searchsci(){
+    return this.http.get<[Movie]>(this.url+ 'sci-fi.php');
   }
 
 }

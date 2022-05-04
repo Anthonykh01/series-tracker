@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Movie, MovieService, Newmovie } from 'src/app/apis/movie.service';
+import { Movie, MovieService, Newmovie ,Moviec} from 'src/app/apis/movie.service';
 
 @Component({
   selector: 'app-search',
@@ -8,6 +8,8 @@ import { Movie, MovieService, Newmovie } from 'src/app/apis/movie.service';
 })
 export class SearchPage implements OnInit {
 movies: Movie[];
+movies1: Moviec[];
+movies2: Moviec[];
 movie: Movie;
 data: Movie;
 name: any;
@@ -20,8 +22,23 @@ newmovies: Newmovie[];
   }
   searchaction(){
     this.service.searchaction().subscribe(response =>{
-      this.newmovies = response;
-      console.log(this.newmovies);
+      this.movies = response;
+      console.log(this.movies);
     });
  }
+ reload(){
+  location.reload();
+ }
+ searchcomedy(){
+  this.service.searchcomedy().subscribe(response =>{
+    this.movies1 = response;
+    console.log(this.movies1);
+  });
+}
+searchsci(){
+  this.service.searchsci().subscribe(response =>{
+    this.movies2 = response;
+    console.log(this.movies1);
+  });
+}
 }
