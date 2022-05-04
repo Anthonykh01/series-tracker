@@ -2,8 +2,8 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 export interface Movie{
   name: string;
-  link: string;
-
+  photo: string;
+  description: string;
 }
 export interface Newmovie{
   name: string;
@@ -24,4 +24,8 @@ export class MovieService {
   getAllnewmovies(){
     return this.http.get<[Newmovie]>(this.url+ 'newmovies.php');
   }
+  searchaction(){
+    return this.http.get<[Newmovie]>(this.url+ 'action.php');
+  }
+
 }

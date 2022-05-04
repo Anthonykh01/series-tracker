@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>search</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content fullscreen>
+<ion-button (click)="searchaction()"></ion-button>
+
+<ion-card class="card" *ngFor="let newmovie of newmovies" >
+  <ion-list>
+      <ion-item>
+        <img src="{{newmovie.photo}}" class="image"/>
+      </ion-item>
+      <ion-item>
+        <ion-button href="{{newmovie.description}}" class="button">{{newmovie.name}} </ion-button>
+      </ion-item>
+    </ion-list>
+  </ion-card>
+  
+</ion-content>
