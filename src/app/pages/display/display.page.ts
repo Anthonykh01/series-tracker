@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Location } from '@angular/common';
-import { Movie, MovieService } from 'src/app/apis/movie.service';
+import { Movie, MovieService,Newmovie } from 'src/app/apis/movie.service';
 
 @Component({
   selector: 'app-display',
@@ -10,6 +10,7 @@ import { Movie, MovieService } from 'src/app/apis/movie.service';
 })
 export class DisplayPage implements OnInit {
   movies: Movie[];
+  newmovies: Newmovie[];
   data: Movie;
 moviename: any;
   constructor(private service: MovieService) {}
@@ -19,6 +20,9 @@ moviename: any;
       this.movies = response;
       console.log(this.movies);
     });
-
+    this.service.getAllnewmovies().subscribe(response =>{
+      this.newmovies = response;
+      console.log(this.newmovies);
+    });
   }
 }

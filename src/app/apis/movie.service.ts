@@ -5,6 +5,11 @@ export interface Movie{
   link: string;
 
 }
+export interface Newmovie{
+  name: string;
+  link: string;
+
+}
 
 @Injectable({
   providedIn: 'root'
@@ -14,6 +19,9 @@ export class MovieService {
 
   constructor(private http: HttpClient) { }
   getAllmovies(){
-    return this.http.get<[Movie]>(this.url+ 'movie.php');
+    return this.http.get<[Movie]>(this.url+ 'movies.php');
+  }
+  getAllnewmovies(){
+    return this.http.get<[Newmovie]>(this.url+ 'newmovies.php');
   }
 }
