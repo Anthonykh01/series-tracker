@@ -1,22 +1,33 @@
 .image {
-    margin: 11px 11px 11px 11px;
+  margin: 11px 11px 11px 11px;
 position: relative;
 height: 190px;
 width: 140px;
+
 }
 .card{
     width: 160px;
     display: inline-block;
     height: 270px;
+    background-color: gray;
+    color: black;
 }
 
 .forecast_container{
     flex-wrap: nowrap;
     overflow-x: scroll!important;
+
   }
   content{
     overflow-x: scroll!important;
   }
   .button{
     width: 150px;
+    
+  }
+  *{
+  }
+  .title{
+ ;
+
   }
