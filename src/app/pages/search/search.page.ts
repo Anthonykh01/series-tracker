@@ -22,7 +22,7 @@ newmovies: Newmovie[];
   }
   searchaction(){
     this.service.searchaction().subscribe(response =>{
-      this.movies = response;
+      this.movies1 = response;
       console.log(this.movies);
     });
  }
@@ -37,7 +37,13 @@ newmovies: Newmovie[];
 }
 searchsci(){
   this.service.searchsci().subscribe(response =>{
-    this.movies2 = response;
+    this.movies1 = response;
+    console.log(this.movies1);
+  });
+}
+searchtrue(){
+  this.service.searchtrue().subscribe(response =>{
+    this.movies1 = response;
     console.log(this.movies1);
   });
 }

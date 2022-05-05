@@ -40,5 +40,7 @@ export class MovieService {
   searchsci(){
     return this.http.get<[Movie]>(this.url+ 'sci-fi.php');
   }
-
+  searchtrue(){
+    return this.http.get<[Movie]>(this.url+ 'true.php');
+  }
 }
