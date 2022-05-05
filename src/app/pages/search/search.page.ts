@@ -9,7 +9,6 @@ import { Movie, MovieService, Newmovie ,Moviec} from 'src/app/apis/movie.service
 export class SearchPage implements OnInit {
 movies: Movie[];
 movies1: Moviec[];
-movies2: Moviec[];
 movie: Movie;
 data: Movie;
 name: any;
