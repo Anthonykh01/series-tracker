@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Location } from '@angular/common';
-import { Movie, MovieService,Newmovie } from 'src/app/apis/movie.service';
+import { Movie, MovieService,Newmovie,Serie } from 'src/app/apis/movie.service';
 
 @Component({
   selector: 'app-display',
@@ -10,7 +10,7 @@ import { Movie, MovieService,Newmovie } from 'src/app/apis/movie.service';
 })
 export class DisplayPage implements OnInit {
   movies: Movie[];
-  sereiss: Serie[];
+  series: Serie[];
   newmovies: Newmovie[];
   data: Movie;
 moviename: any;

@@ -48,7 +48,7 @@ export class MovieService {
   searchtrue(){
     return this.http.get<[Movie]>(this.url+ 'true.php');
   }
-  getseries){
+  getseries(){
     return this.http.get<[Serie]>(this.url+ 'series.php');
   }
 }
