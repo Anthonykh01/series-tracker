@@ -10,6 +10,7 @@ import { Movie, MovieService,Newmovie } from 'src/app/apis/movie.service';
 })
 export class DisplayPage implements OnInit {
   movies: Movie[];
+  sereiss: Serie[];
   newmovies: Newmovie[];
   data: Movie;
 moviename: any;
@@ -23,6 +24,10 @@ moviename: any;
     this.service.getAllnewmovies().subscribe(response =>{
       this.newmovies = response;
       console.log(this.newmovies);
+    });
+    this.service.getseries().subscribe(response =>{
+      this.series = response;
+      console.log(this.series);
     });
   }
 }

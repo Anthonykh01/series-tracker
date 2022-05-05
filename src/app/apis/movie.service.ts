@@ -12,6 +12,11 @@ export interface Moviec{
   description: string;
   genre: string;
 }
+export interface Serie{
+  name: string;
+  photo: string;
+  description: string;
+}
 export interface Newmovie{
   name: string;
   link: string;
@@ -42,5 +47,8 @@ export class MovieService {
   }
   searchtrue(){
     return this.http.get<[Movie]>(this.url+ 'true.php');
+  }
+  getseries){
+    return this.http.get<[Serie]>(this.url+ 'series.php');
   }
 }
